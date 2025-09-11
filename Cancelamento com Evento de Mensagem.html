@@ -1,105 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="c3903f8" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.7.0">
-  <bpmn:collaboration id="Collaboration_07cdtmm">
-    <bpmn:participant id="Participant_0nrbqdj" name="Cancelamento com Evento de Mensagem" processRef="Process_0z092rv" />
-  </bpmn:collaboration>
-  <bpmn:process id="Process_0z092rv" name="New BPMN diagram" isExecutable="true">
-    <bpmn:startEvent id="StartEvent_1" name="inicio">
-      <bpmn:outgoing>Flow_0p4z86i</bpmn:outgoing>
-    </bpmn:startEvent>
-    <bpmn:userTask id="Activity_19cqy3e" name="processar pedido">
-      <bpmn:extensionElements>
-        <zeebe:userTask />
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_0p4z86i</bpmn:incoming>
-      <bpmn:outgoing>Flow_0nu6miq</bpmn:outgoing>
-    </bpmn:userTask>
-    <bpmn:sequenceFlow id="Flow_0p4z86i" sourceRef="StartEvent_1" targetRef="Activity_19cqy3e" />
-    <bpmn:sequenceFlow id="Flow_0nu6miq" sourceRef="Activity_19cqy3e" targetRef="Activity_1ji4lsf" />
-    <bpmn:sequenceFlow id="Flow_1vdylmg" sourceRef="Event_06x79ip" targetRef="Event_14izh8b" />
-    <bpmn:sequenceFlow id="Flow_0j2agdd" sourceRef="Event_14izh8b" targetRef="Activity_0erbcht" />
-    <bpmn:sequenceFlow id="Flow_16q5clm" sourceRef="Activity_0erbcht" targetRef="Event_01y5g68" />
-    <bpmn:sendTask id="Activity_1ji4lsf" name="confirmar pedido">
-      <bpmn:incoming>Flow_0nu6miq</bpmn:incoming>
-    </bpmn:sendTask>
-    <bpmn:boundaryEvent id="Event_06x79ip" name="esperar entrega" cancelActivity="false" attachedToRef="Activity_1ji4lsf">
-      <bpmn:outgoing>Flow_1vdylmg</bpmn:outgoing>
-      <bpmn:timerEventDefinition id="TimerEventDefinition_1rphe3w" />
-    </bpmn:boundaryEvent>
-    <bpmn:intermediateCatchEvent id="Event_14izh8b" name="evento de mensagem&#10;não interromper: Cancelamento">
-      <bpmn:incoming>Flow_1vdylmg</bpmn:incoming>
-      <bpmn:outgoing>Flow_0j2agdd</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_0sjbxae" />
-    </bpmn:intermediateCatchEvent>
-    <bpmn:sendTask id="Activity_0erbcht" name="cancelar pedido">
-      <bpmn:incoming>Flow_0j2agdd</bpmn:incoming>
-      <bpmn:outgoing>Flow_16q5clm</bpmn:outgoing>
-    </bpmn:sendTask>
-    <bpmn:endEvent id="Event_01y5g68" name="fim">
-      <bpmn:incoming>Flow_16q5clm</bpmn:incoming>
-    </bpmn:endEvent>
-  </bpmn:process>
-  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
-    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_07cdtmm">
-      <bpmndi:BPMNShape id="Participant_0nrbqdj_di" bpmnElement="Participant_0nrbqdj" isHorizontal="true">
-        <dc:Bounds x="260" y="90" width="1080" height="330" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
-        <dc:Bounds x="312" y="242" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="317" y="285" width="26" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_19cqy3e_di" bpmnElement="Activity_19cqy3e">
-        <dc:Bounds x="400" y="220" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_175qbv6_di" bpmnElement="Activity_1ji4lsf">
-        <dc:Bounds x="620" y="220" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_14izh8b_di" bpmnElement="Event_14izh8b">
-        <dc:Bounds x="822" y="242" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="801" y="285" width="81" height="53" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_069yku9_di" bpmnElement="Activity_0erbcht">
-        <dc:Bounds x="960" y="220" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_01y5g68_di" bpmnElement="Event_01y5g68">
-        <dc:Bounds x="1172" y="242" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1183" y="285" width="14" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_06x79ip_di" bpmnElement="Event_06x79ip">
-        <dc:Bounds x="702" y="242" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="681" y="303" width="78" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Flow_0p4z86i_di" bpmnElement="Flow_0p4z86i">
-        <di:waypoint x="348" y="260" />
-        <di:waypoint x="400" y="260" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0nu6miq_di" bpmnElement="Flow_0nu6miq">
-        <di:waypoint x="500" y="260" />
-        <di:waypoint x="620" y="260" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1vdylmg_di" bpmnElement="Flow_1vdylmg">
-        <di:waypoint x="738" y="260" />
-        <di:waypoint x="822" y="260" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0j2agdd_di" bpmnElement="Flow_0j2agdd">
-        <di:waypoint x="858" y="260" />
-        <di:waypoint x="960" y="260" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_16q5clm_di" bpmnElement="Flow_16q5clm">
-        <di:waypoint x="1060" y="260" />
-        <di:waypoint x="1172" y="260" />
-      </bpmndi:BPMNEdge>
-    </bpmndi:BPMNPlane>
-  </bpmndi:BPMNDiagram>
-</bpmn:definitions>
+# Label Required (label-required)
+
+Checks the presence of a label.
+
+
+Example of __incorrect__ usage for this rule:
+
+![Incorrect usage example](./examples/label-required-incorrect.png)
+
+```xml
+    ...
+    <bpmn:task id="Task_1">
+      <bpmn:incoming>SequenceFlow_1</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_2</bpmn:outgoing>
+    </bpmn:task>
+    ...
+```
+
+Cf. [`label-required-incorrect.bpmn`](./examples/label-required-incorrect.bpmn).
+
+
+Example of __correct__ usage for this rule:
+
+![Correct usage example](./examples/label-required-correct.png)
+
+```xml
+    ...
+    <bpmn:task id="Task_1" name="Eat">
+      <bpmn:incoming>SequenceFlow_1</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_2</bpmn:outgoing>
+    </bpmn:task>
+    ...
+```
+
+Cf. [`label-required-correct.bpmn`](./examples/label-required-correct.bpmn).
