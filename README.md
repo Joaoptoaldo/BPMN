@@ -32,7 +32,7 @@ Este repositório foi criado para **desenvolvimento de diagramas e exemplos de e
    - Pools: representam participantes principais do processo.  
    - Lanes: subdividem pools para mostrar responsabilidades de diferentes departamentos ou funções.
 
-![Diagrama BPMN](Exemplo2 – Processo de Pedido de Férias.png)
+![Diagrama BPMN](Modelos/Exemplo2 – Processo de Pedido de Férias.png)
 
 ---
 
