@@ -32,8 +32,6 @@ Este repositório foi criado para **desenvolvimento de diagramas e exemplos de e
    - Pools: representam participantes principais do processo.  
    - Lanes: subdividem pools para mostrar responsabilidades de diferentes departamentos ou funções.
 
-![Descrição da Imagem](BPMN/Modelos/Exemplo2 – Processo de Pedido de Férias.png)
-
 ---
 
 ## Repositório
@@ -44,6 +42,7 @@ Este repositório foi criado para **desenvolvimento de diagramas e exemplos de e
    - [Bizagi Modeler](https://www.bizagi.com/en/platform/modeler)  
 
 ---
+
 
 
 
