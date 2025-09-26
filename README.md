@@ -36,9 +36,8 @@ Este repositório foi criado para **desenvolvimento de diagramas, exemplos e mat
 
 ## Como usar este repositório
 
-1. Explore a pasta **diagramas** para ver exemplos visuais de processos.  
-2. Consulte **materiais** e **exercícios** para aprofundar o aprendizado.  
-3. Crie seus próprios diagramas usando ferramentas como:
+1. Explore a pasta **modelos** para ver exemplos visuais de processos.  
+2. Crie seus próprios diagramas usando ferramentas como:
    - [Camunda Modeler](https://camunda.com/download/modeler/)  
    - [Bizagi Modeler](https://www.bizagi.com/en/platform/modeler)  
 
