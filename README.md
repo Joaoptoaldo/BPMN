@@ -12,8 +12,6 @@ Este repositório foi criado para **desenvolvimento de diagramas, exemplos e mat
 ---
 
 
----
-
 ## Tutorial: Como usar BPMN
 
 **BPMN** é uma notação gráfica para modelar processos de negócio. Os principais elementos incluem:
@@ -46,7 +44,6 @@ Este repositório foi criado para **desenvolvimento de diagramas, exemplos e mat
 
 ---
 
-> Repositório recomendado para estudantes, profissionais de TI e gestores que desejam aprender a **modelar processos de negócio** de forma estruturada e padronizada.
 
 
 
