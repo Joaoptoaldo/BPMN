@@ -1,6 +1,6 @@
 # BPMN - Business Process Model and Notation
 
-Este repositório foi criado para **desenvolvimento de diagramas, exemplos e materiais de estudo** sobre **Business Process Model and Notation (BPMN)**.
+Este repositório foi criado para **desenvolvimento de diagramas e exemplos de estudo** sobre **Business Process Model and Notation (BPMN)**.
 
 ---
 
@@ -30,11 +30,13 @@ Este repositório foi criado para **desenvolvimento de diagramas, exemplos e mat
 
 5. **Pools e Lanes**  
    - Pools: representam participantes principais do processo.  
-   - Lanes: subdividem pools para mostrar responsabilidades de diferentes departamentos ou funções.  
+   - Lanes: subdividem pools para mostrar responsabilidades de diferentes departamentos ou funções.
+
+![Diagrama BPMN](Exemplo2 – Processo de Pedido de Férias.png)
 
 ---
 
-## Como usar este repositório
+## Repositório
 
 1. Explore a pasta **modelos** para ver exemplos visuais de processos.  
 2. Crie seus próprios diagramas usando ferramentas como:
