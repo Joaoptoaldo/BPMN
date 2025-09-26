@@ -6,7 +6,7 @@ Este repositório foi criado para **desenvolvimento de diagramas, exemplos e mat
 
 ## Objetivo
 
-- Facilitar o estudo e compreensão de **BPMN**.  
+- Facilitar a compreensão de **BPMN**.  
 - Fornecer exemplos de modelagem de processos de negócio.  
 
 ---
