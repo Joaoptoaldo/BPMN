@@ -1,6 +1,6 @@
 # BPMN - Business Process Model and Notation
 
-Este repositório foi criado para **desenvolvimento de diagramas e exemplos de estudo** sobre **Business Process Model and Notation (BPMN)**.
+Este espaço foi criado para **desenvolvimento de diagramas e materiais de estudo** sobre **Business Process Model and Notation (BPMN)**.
 
 ---
 # Processo de Negócio
